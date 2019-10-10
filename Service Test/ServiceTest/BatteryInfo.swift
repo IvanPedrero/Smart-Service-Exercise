@@ -22,7 +22,7 @@ class BatteryInfo{
         
         //Save battery level.
         let ref = Database.database().reference()
-        ref.child("batery/level").setValue(batteryLevel)
+        ref.child("battery/level").setValue(batteryLevel)
         
         //ACK message in the console.
         print("\nSaved battery level in firebase...\n")
