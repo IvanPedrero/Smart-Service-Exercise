@@ -30,6 +30,7 @@ class LoginController: UIViewController, NSURLConnectionDelegate, NSURLConnectio
         
         //Get all the information.
         getJsonFromUrl()
+        
     }
 
     @IBAction func login(_ sender: Any) {

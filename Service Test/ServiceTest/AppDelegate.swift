@@ -20,11 +20,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Configure firebase.
         FirebaseApp.configure()
+           
+        //Create the bg observers.
+        NotificationCenter.default.addObserver(self, selector: #selector(batteryLevelDidChange), name: UIDevice.batteryLevelDidChangeNotification, object: nil)
         
-        //Save the battery level.
-        BatteryInfo.saveBatteryLevel()
+        //Save the value to firebase.
+        BatteryInfo.uploadBatteryLevel()
+        
+        //In case of needing the removal of data:
+        //UserDefaults.standard.removeObject(forKey: "batteryLevel")
         
         return true
+    }
+    
+    
+    @objc func batteryLevelDidChange(_ notification: Notification) {
+        BatteryInfo.saveBatteryLevel()
     }
 
     // MARK: UISceneSession Lifecycle
@@ -40,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+
 
 
 }

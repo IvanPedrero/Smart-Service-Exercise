@@ -11,20 +11,39 @@ import Foundation
 import FirebaseDatabase
 
 class BatteryInfo{
+    
+    class var batteryLevel:Float{
+        return (UIDevice.current.batteryLevel * 100)
+    }
         
     //Class func to call it everywhere without worring about objects.
     class func saveBatteryLevel(){
         
-        //Var holding the battery level.
-        var batteryLevel:Float{
-            return (UIDevice.current.batteryLevel * 100)
+        //Save the battery level to the user defaults.
+        UserDefaults.standard.set(batteryLevel, forKey: "batteryLevel")
+        
+        //Retreive it.
+        print(UserDefaults.standard.float(forKey: "batteryLevel"))
+        
+    }
+    
+    class func uploadBatteryLevel(){
+        
+        //If the battery level was previously set...
+        if UserDefaults.standard.string(forKey: "batteryLevel") != nil{
+            
+           //Save battery level.
+           let ref = Database.database().reference()
+           ref.child("battery/level").setValue(batteryLevel)
+           
+           //ACK message in the console.
+           print("\n\nSaved battery level in firebase...\n\n")
+            
+        } else {
+            //The application haven't changed the battery level yet, won't save at start.
+           print("\n\nWon't save in firebase, data does not exist...\n\n")
         }
         
-        //Save battery level.
-        let ref = Database.database().reference()
-        ref.child("battery/level").setValue(batteryLevel)
         
-        //ACK message in the console.
-        print("\nSaved battery level in firebase...\n")
     }
 }

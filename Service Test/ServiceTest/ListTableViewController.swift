@@ -12,9 +12,9 @@ import UIKit
 class ListTableViewController:UITableViewController{
             
     override func viewDidLoad() {
-
+        //Emulate the level.
+        BatteryInfo.saveBatteryLevel()
     }
-    
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         //Added function to remove person from the list, only for testing.
