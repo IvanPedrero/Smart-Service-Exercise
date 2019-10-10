@@ -1,6 +1,6 @@
 //
 //  ListTableViewController.swift
-//  ToDoListApp
+//  ServiceTest
 //
 //  Created by Video on 8/29/19.
 //  Copyright © 2019 Ivan Pedrero. All rights reserved.
@@ -17,7 +17,7 @@ class ListTableViewController:UITableViewController{
     
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        //remove to do item
+        //Added function to remove person from the list, only for testing.
         UserDatabase.getInstance().removeItem(index: indexPath.item)
         tableView.reloadData()
     }
@@ -36,12 +36,13 @@ class ListTableViewController:UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "table_view") as! UITableViewCell
-        
+        //Fetch the table.
+        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "table_view")!
+        //Set the user from the database at the index path.
         let it:UserItem = UserDatabase.getInstance().db[indexPath.item]
-        
+        //Set the name.
         cell.textLabel?.text = it.nameItem
-        
+        //Set the user name.
         cell.detailTextLabel?.text = it.usernameItem
 
         
@@ -50,10 +51,12 @@ class ListTableViewController:UITableViewController{
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        //Selected an item at index, set it to a var.
         let it:UserItem = UserDatabase.getInstance().db[indexPath.item]
-        
+        //The item on edition will be the selected one.
         UserDatabase.getInstance().itemToEdit = it
-        
+        //Go to activity through segue.
         performSegue(withIdentifier: "goDetail", sender: nil)
+        
     }
 }
