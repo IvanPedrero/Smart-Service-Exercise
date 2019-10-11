@@ -15,68 +15,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Username" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="8TY-46-z8J">
-                                <rect key="frame" x="20" y="381" width="374" height="49"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Username" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="8TY-46-z8J">
+                                <rect key="frame" x="20" y="376" width="374" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="Qtk-Cj-Al9"/>
-                                </constraints>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4rn-GT-PUx">
-                                <rect key="frame" x="20" y="469" width="374" height="48"/>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4rn-GT-PUx">
+                                <rect key="frame" x="20" y="479" width="374" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="pp1-Xh-wFB"/>
-                                </constraints>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random User Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOA-Ts-Tfx">
-                                <rect key="frame" x="20" y="257" width="374" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Random User Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOA-Ts-Tfx">
+                                <rect key="frame" x="20" y="284" width="374" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dB8-K9-WI3">
-                                <rect key="frame" x="150" y="567" width="114" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="fGX-3y-CuZ"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dB8-K9-WI3">
+                                <rect key="frame" x="172" y="555" width="71" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Sign in"/>
+                                <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="login:" destination="bec-fa-GkA" eventType="touchUpInside" id="fKR-sb-stv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSc-di-nPd">
-                                <rect key="frame" x="20" y="202" width="374" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smart Service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSc-di-nPd">
+                                <rect key="frame" x="20" y="229" width="374" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="dB8-K9-WI3" firstAttribute="top" secondItem="4rn-GT-PUx" secondAttribute="bottom" constant="50" id="HG5-jp-MUS"/>
-                            <constraint firstItem="tSc-di-nPd" firstAttribute="leading" secondItem="GOA-Ts-Tfx" secondAttribute="leading" id="Kjr-Py-ciW"/>
-                            <constraint firstItem="8TY-46-z8J" firstAttribute="trailing" secondItem="4rn-GT-PUx" secondAttribute="trailing" id="M9V-tG-10x"/>
-                            <constraint firstItem="GOA-Ts-Tfx" firstAttribute="leading" secondItem="8TY-46-z8J" secondAttribute="leading" id="Ndg-Zl-dWB"/>
-                            <constraint firstItem="tSc-di-nPd" firstAttribute="top" secondItem="xfg-fS-9We" secondAttribute="top" constant="158" id="Rtf-z7-jWm"/>
-                            <constraint firstItem="xfg-fS-9We" firstAttribute="bottom" secondItem="dB8-K9-WI3" secondAttribute="bottom" constant="253" id="Uck-W5-QNU"/>
-                            <constraint firstItem="tSc-di-nPd" firstAttribute="leading" secondItem="9G2-W0-s3u" secondAttribute="leadingMargin" id="WkX-W8-4h5"/>
-                            <constraint firstItem="tSc-di-nPd" firstAttribute="trailing" secondItem="9G2-W0-s3u" secondAttribute="trailingMargin" id="Y0E-0P-DmM"/>
-                            <constraint firstItem="dB8-K9-WI3" firstAttribute="leading" secondItem="xfg-fS-9We" secondAttribute="leading" constant="150" id="Ys9-s7-PbY"/>
-                            <constraint firstItem="GOA-Ts-Tfx" firstAttribute="trailing" secondItem="8TY-46-z8J" secondAttribute="trailing" id="dVS-a5-Zbe"/>
-                            <constraint firstItem="tSc-di-nPd" firstAttribute="trailing" secondItem="GOA-Ts-Tfx" secondAttribute="trailing" id="nXK-lv-Pt2"/>
-                            <constraint firstItem="8TY-46-z8J" firstAttribute="leading" secondItem="4rn-GT-PUx" secondAttribute="leading" id="oKg-ao-Rsl"/>
-                            <constraint firstItem="4rn-GT-PUx" firstAttribute="centerX" secondItem="dB8-K9-WI3" secondAttribute="centerX" id="qwh-e9-iOu"/>
-                            <constraint firstItem="4rn-GT-PUx" firstAttribute="top" secondItem="8TY-46-z8J" secondAttribute="bottom" constant="39" id="tyd-P3-BiN"/>
-                            <constraint firstItem="GOA-Ts-Tfx" firstAttribute="top" secondItem="tSc-di-nPd" secondAttribute="bottom" constant="8" id="vIe-qP-eJ2"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xfg-fS-9We"/>
                     </view>
                     <connections>
@@ -174,7 +153,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F73-qH-Ujs">
-                                <rect key="frame" x="94" y="439" width="289" height="33"/>
+                                <rect key="frame" x="94" y="438.5" width="289" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="zlF-C9-C1O"/>
                                 </constraints>
@@ -192,7 +171,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyq-1q-UlM">
-                                <rect key="frame" x="98" y="504" width="285" height="32"/>
+                                <rect key="frame" x="98" y="503.5" width="285" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

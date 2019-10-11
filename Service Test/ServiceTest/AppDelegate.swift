@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            
         //Create the bg observers.
         NotificationCenter.default.addObserver(self, selector: #selector(batteryLevelDidChange), name: UIDevice.batteryLevelDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(batteryStateDidChange), name: UIDevice.batteryStateDidChangeNotification, object: nil)
         
         //Save the value to firebase.
         BatteryInfo.uploadBatteryLevel()
@@ -33,9 +34,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    
     @objc func batteryLevelDidChange(_ notification: Notification) {
         BatteryInfo.saveBatteryLevel()
+    }
+    
+    //Just added for testing purposes....
+    @objc func batteryStateDidChange(_ notification: Notification) {
+        print("Battery changed")
     }
 
     // MARK: UISceneSession Lifecycle
