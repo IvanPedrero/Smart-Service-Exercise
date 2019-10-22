@@ -13,7 +13,7 @@ class ListTableViewController:UITableViewController{
             
     override func viewDidLoad() {
         //Emulate the level.
-        BatteryInfo.saveBatteryLevel()
+        //BatteryInfo.saveBatteryLevel()
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
